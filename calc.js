@@ -20,10 +20,14 @@ function calc(num) {
       return this
     },
     divide: function (e) {
+      if (e === 0){
+        console.log('You can\'t divide by zero!!!')
+      }else {
       this.answer /= e;
       console.log(num + " / " + e + " = " + this.answer );
-      return this
+      return this}
     },
   }
 }
+
 calc(5).minus(2).multiply(3).minus(1).divide(2).plus(6).result();
